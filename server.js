@@ -8,8 +8,13 @@ app.get('/', (req, res) => {
   });
 
   app.set('view engine', 'ejs');
+
+  function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
   app.get('/drinks', (req, res) => {
-    res.render('index', { drinks: drinks });
+    res.render('index', { drinks, capitalizeFirstLetter });
   });
   
 
