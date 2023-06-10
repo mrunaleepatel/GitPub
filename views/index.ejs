@@ -11,6 +11,21 @@
         body {
             background-color: crimson;
             color: aliceblue;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 40px;
+        }
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            color: aliceblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -20,7 +35,7 @@
         <% drinks.forEach(function(drink, index) { %>
           <li><a href="/drinks/<%= index %>"><%= capitalizeFirstLetter(drink.name) %></a> - $<%= drink.price %></li>
         <% }); %>
-      </ul>
+    </ul>
 
 </body>
 </html>

@@ -17,8 +17,9 @@ app.get('/drinks', (req, res) => {
     res.render('index', { drinks, capitalizeFirstLetter });
   });
   
-app.get('/drinks/:id', (req, res) => {
-    res.send(req.params.id);
+  app.get('/drinks/:id', (req, res) => {
+    const id = req.params.id;
+    res.render('show', { drinks, id });
   });
 
 
